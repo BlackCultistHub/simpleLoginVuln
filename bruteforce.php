@@ -22,7 +22,7 @@
   if (isset($_GET['username']) && isset($_GET['password'])) {
     if (strcmp($_GET['username'], 'admin') == 0 && strcmp($_GET['password'], 'admin') == 0) {
       // Successful login
-      header('Location: admin.php?logged=1');
+      header('Location: bruteforce.php?logged=1');
       die();
     } else {
       $error = 1; // Incorrect username or password
@@ -77,7 +77,7 @@
             <h3 class="card-header">Dashboard</h3>
             <div class="card-body">
               <p class="card-text">Howdy, <strong>admin</strong>!</p>
-              <p class="card-text"><a href="admin.php">Log Out</a></p>
+              <p class="card-text"><a href="bruteforce.php">Log Out</a></p>
             </div>
           </div>
         </div>
